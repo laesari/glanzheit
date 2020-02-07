@@ -1,0 +1,176 @@
+<!DOCTYPE>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="shortcut icon" href="pictures/logo.png">
+	<title>Glanzheit</title>
+	<script src="SpryAssets/SpryMenuBar.js" type="text/javascript"></script>
+	<link href="SpryAssets/SpryMenuBarHorizontal.css" rel="stylesheet" type="text/css" />   
+    <style type="text/css">
+		nav {
+			position: fixed;
+			z-index:2;
+		}
+    	table {
+    		border-collapse: collapse;
+    	}
+		.mySlides {
+			display:none;
+			width:790;
+			height:350;
+		}
+		.text {
+			width:1060px;
+			height:134px;
+			color:#FFF;
+			background-image:url(pictures/announcement.jpg);
+		}
+		header, article {
+			margin-left: 145;
+	 		margin-right:145;
+			color:#FFF;
+			text-align:justify;
+			font-size:18px;
+		}
+		header {
+			height:550;
+		}
+		article {
+			height:1550;
+		}
+		.taruhgambar {
+			position:relative;
+			margin-left:23;
+			width: 253px;
+			height:351px;
+ 	 	}
+  		.taruhgambar img {
+			position: absolute;
+			z-index: 1;
+			left: 11px;
+			width: 100%;
+			transition: opacity 1s ease-in-inside;
+			top: 1px;
+		}
+		.taruhgambar .gambar2:hover {
+			opacity: 0;
+		} 
+		footer {
+			background-color:#111111;
+			background-image:url(pictures/footer.jpg);
+			width:100%;
+			height:118;
+			color:#CCC;
+			text-align:center;
+		}
+	</style>
+</head>
+
+<body bgcolor="242424" topmargin="0" leftmargin="0">
+	<nav>
+	<table width="1366" bgcolor="#000000">
+        <td width="52" lign="right"><a href="index.html">
+        <img src="pictures/icon.jpg" height="45" style="margin-left:145"/><a></td>
+		<td width="1158"><ul id="MenuBar1" class="MenuBarHorizontal">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="#" class="MenuBarItemSubmenu">Member</a>
+				<ul>
+					<li><a href="senior.html">Anggota Senior</a></li>
+					<li><a href="veteran.html">Veteran</a></li>
+					<li><a href="gm.html">Guild Master</a></li>
+				</ul>
+			</li>
+			<li><a href="event.html">Event</a></li>
+			<li><a href="#" class="MenuBarItemSubmenu">Social</a>
+				<ul>
+                	<li><a href="https://www.facebook.com/groups/1650139705247603">Facebook</a></li>
+                	<li><a href="https://discord.gg/wffdveG">Discord</a></li>
+				</ul>
+			</li>
+			<li><a href="tentang.html">About Me</a></li>
+		</td>
+	</table>
+	</nav>
+    
+    <header>
+    	<table width="100%">
+        	<tr>
+            	<td colspan="3" class="text">
+                	<br>
+                	<br>
+                    <p></p>
+					<marquee width="818" style="margin-left:172">Guild Master tidak pernah meminta ID dan Password game anda.
+                    </marquee>
+              	</td>    
+            </tr>
+         	<tr>
+               	<td width="80%" class="w3-content w3-section" style="max-width:500px">
+                	<a href="about.html">
+  						<img class="mySlides" src="pictures/slide33.png" width="790" height="350"></a>
+                	<a href="base.html">
+  						<img class="mySlides" src="pictures/slide22.png" width="790" height="350"></a>
+                </td>
+                <td width="1%">
+                </td>
+                <td width="19%"><div class="taruhgambar">
+                	<img src="pictures/pict33.jpg" class="gambar1" width="253" height="351">
+  					<a href="event.html">
+                   	<img src="pictures/pict3.jpg" class="gambar2" width="63%" height="350"></a>
+                    </div>
+                </td>             
+            </tr>
+		</table>
+	</header>
+    
+    <article>
+		<br>
+		<h1 align="center">Base Camp Guild</h1>
+			<p align="center">Base Camp Glanzheit Guild terletak di Saint's Haven [CH.5] - Royal Palace Basemenet
+				<br>
+				<br>
+				<br>Lingkaran merah pada gambar di bawah ini merupakan posisi Base Camp jika dilihat melalui peta Saint's Haven.
+				<br>Untuk menuju Base Camp, klik pada portal yang berada di dalam lingkaran merah tersebut maka akan berpindah ke
+            	 lokasi bersangkutan. 
+				<br>
+				<br>
+				<br><img src="pictures/map.jpg" width="746" height="561"><br>
+			</p>
+		<br>
+		<br>
+	</article>
+    
+    
+    <footer>
+		<br>
+        <br>
+        ©Copyright Laesari Rianti 175410176
+        <br>
+        <p>
+        	<a href="https://www.facebook.com/laesari.r">
+        	<img src="pictures/facebook.png" width="42" height="42"></img></a>
+            <img src="pictures/wa.png" width="42" height="42"></img>
+        	+62 896-2769-5811
+        </p>
+    </footer>
+    
+	<script type="text/javascript">
+		var MenuBar1 = new Spry.Widget.MenuBar("MenuBar1",{imgDown:"SpryAssets/SpryMenuBarDownHover.gif", imgRight:			
+		"SpryAssets/SpryMenuBarRightHover.gif"});
+		var myIndex = 0;
+		carousel();
+
+		function carousel() {
+		var i;
+		var x = document.getElementsByClassName("mySlides");
+		for (i = 0; i < x.length; i++) {
+			x[i].style.display = "none";  
+		}
+		 myIndex++;
+		if (myIndex > x.length) {myIndex = 1}    
+		x[myIndex-1].style.display = "block";  
+		setTimeout(carousel, 4000);
+	}
+	</script>
+    
+</body>
+</html>
